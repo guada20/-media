@@ -1,0 +1,42 @@
+.caja-1,
+.caja-2,
+.caja-3,
+.caja-4{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    border: 2px solid black;
+}
+.contenedor{
+    width: 90%;
+    height: auto;
+    background-color: gray;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+/*medidas para celulares*/
+@media  (max-width: 576px) {
+    .contenedor{
+           flex-direction: column;
+    }
+}
+/*medidas para tablets*/
+@media (min-width: 577px) and (max-width: 1024px){
+    .contenedor{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+/*medidas para portatiles*/
+@media (min-width: 1025px) and (max-width: 1300px){
+    .contenedor{
+        flex-direction: row;
+     }
+     .caja-1,
+     .caja-2,
+     .caja-3,
+     .caja-4{
+        border-radius: 50%;
+     }
+}
